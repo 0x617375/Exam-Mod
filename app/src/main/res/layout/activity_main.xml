@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="fill_parent"
+     android:layout_width="fill_parent"
+     android:gravity="center"
+     android:orientation="vertical">
+
+    <ImageView
+         android:layout_height="100.0dip"
+         android:layout_width="100.0dip"
+         android:layout_marginBottom="20.0dip"
+         android:src="@drawable/tutwuri"
+         android:contentDescription="@string/logo"
+         android:id="@+id/logoView" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:id="@+id/masukkanURLTextView"
+         android:text="@string/masukkan_url_cbt_bimasoft" />
+
+    <EditText
+         android:layout_height="50.0dip"
+         android:layout_width="wrap_content"
+         android:hint="@string/https_contoh_com"
+         android:textAlignment="center"
+         android:inputType="textUri"
+         android:id="@+id/urlEditText" />
+
+    <Button
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:id="@+id/masukBtn"
+         android:text="@string/masuk" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_marginBottom="30.0dip"
+         android:textSize="20.0sp"
+         android:layout_marginTop="30.0dip"
+         android:textStyle="bold"
+         android:text="@string/tata_tertib_ujian" />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="300.0dip"
+         android:orientation="vertical">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="fill_parent"
+             android:layout_marginBottom="20.0dip"
+             android:orientation="horizontal">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:text="@string/_1" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:text="@string/rule_1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="fill_parent"
+             android:layout_marginBottom="20.0dip"
+             android:orientation="horizontal">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:text="@string/_2" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:text="@string/rule_2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="fill_parent"
+             android:layout_marginBottom="20.0dip"
+             android:orientation="horizontal">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:text="@string/_3" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:text="@string/rule_3" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

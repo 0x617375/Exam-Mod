@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="_1">1.</string>
+    <string name="_2">2.</string>
+    <string name="_3">3.</string>
+    <string name="app_name">Exam Mod @TheWhiteHat</string>
+    <string name="https_contoh_com">https://contoh.com</string>
+    <string name="logo">Logo</string>
+    <string name="masuk">Masuk</string>
+    <string name="masukkan_url_cbt_bimasoft">Masukkan URL CBT Bimasoft</string>
+    <string name="rule_1">Dilarang membuka Browser, Floating Apps, Google, atau Website Lainnya.</string>
+    <string name="rule_2">Dilarang membuka notifikasi pesan, membalas pesan, dan berpindah ke aplikasi lain</string>
+    <string name="rule_3">Apabila aplikasi mendeteksi kecurangan maka aplikasi akan langsung merubah status pengerjaan menjadi selesai. Dan siswa dianggap telah menyelesaikan ujian dan dipersilahkan keluar ruangan</string>
+    <string name="tata_tertib_ujian">TATA TERTIB UJIAN</string>
+    <string name="credit">Modded by The White Hat Hacker</string>
+</resources>

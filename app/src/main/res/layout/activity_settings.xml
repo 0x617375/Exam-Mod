@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="fill_parent"
+     android:layout_width="fill_parent">
+
+    <LinearLayout
+         android:layout_height="fill_parent"
+         android:layout_width="fill_parent"
+         android:orientation="vertical"
+         android:id="@+id/linlayparnt">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:padding="16dp"
+             android:orientation="horizontal">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:textSize="16sp"
+                 android:layout_weight="1"
+                 android:text="Dark Mode untuk web nya (agak ngebug tambahan tulisan aneh saat test)" />
+
+            <Switch
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:checked="false"
+                 android:id="@+id/switch_dark_mode" />
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:padding="16dp"
+             android:orientation="horizontal">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:textSize="16sp"
+                 android:layout_weight="1"
+                 android:text="Support zoom di web (rekomendasi diaktifkan saja)" />
+
+            <Switch
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:checked="false"
+                 android:id="@+id/switch_support_zoom" />
+
+        </LinearLayout>
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="32dp"
+             android:layout_gravity="center"
+             android:id="@+id/fitur"
+             android:text="Fiturnya baru dikit wkwkwk" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:text=" " />
+
+        <com.hanks.htextview.base.RainbowTextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:gravity="center"
+             android:textSize="35sp"
+             app:colorSpace="75dp"
+             app:colorSpeed="8dp"
+             android:maxLines="10"
+             android:id="@+id/rainbow"
+             android:text="Credit for @TheWhiteHatHacker" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:text=" " />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="32dp"
+             android:layout_gravity="center"
+             android:id="@+id/manual"
+             android:text="Fitur mod yang tersedia" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="20dp"
+             android:layout_gravity="center"
+             android:text="★ Keluar aplikasi tanpa terlogout" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="20dp"
+             android:layout_gravity="center"
+             android:text="★ Bisa swipe notif kebawah tanpa logout" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="20dp"
+             android:layout_gravity="center"
+             android:text="★ Bisa Screenshoot dan rekam layar" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="20dp"
+             android:layout_gravity="center"
+             android:text="★ Double back button untuk logout" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="20dp"
+             android:layout_gravity="center"
+             android:text="★ Triple back button untuk keluar aplikasi" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="20dp"
+             android:layout_gravity="center"
+             android:text="★ Rotate window tanpa ter-refresh" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="20dp"
+             android:layout_gravity="center"
+             android:text="★ Layar belah tanpa ter-refresh" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="20dp"
+             android:layout_gravity="center"
+             android:text="★ Layar otomatis selalu menyala" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="20dp"
+             android:layout_gravity="center"
+             android:text="★ Dark mode (bug ada sedikit tambahan teks aneh saat mengerjakan)" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="20dp"
+             android:layout_gravity="center"
+             android:text="★ Zoom in/out website (jika tulisan kekecilan)" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="20dp"
+             android:layout_gravity="center"
+             android:text="★ Dimodif dari apk aslinya (re-code), jadi aman digunakan" />
+
+        <yanzhikai.textpath.SyncTextPathView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             app:text="• Jangan Lupa Saskreb ★"
+             app:duration="12345"
+             app:showPainter="true"
+             app:textSize="55sp"
+             app:paintStrokeColor="@android:color/holo_blue_light"
+             app:textInCenter="true"
+             app:pathStrokeColor="@android:color/holo_orange_light"
+             android:id="@+id/stpv_fortune"
+             android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+</ScrollView>

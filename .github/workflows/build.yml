@@ -1,0 +1,64 @@
+name: Build and Upload APK
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+      - '**.img'
+      - '.github/workflows/releases.yml'
+
+env:
+ zero: 0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Cancel previous runs
+      uses: styfle/cancel-workflow-action@0.12.1
+      with:
+        access_token: ${{ github.token }}
+
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      with:
+       fetch-depth: 0
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Changing gradlew permission
+      run: chmod +x ./gradlew
+
+    - name: Setting env version from gradle
+      run: echo "version=$(grep -oP 'versionName = "\K[^"]+' app/build.gradle.kts)" >> "$GITHUB_ENV"
+
+    - name: Restore cache
+      uses: actions/cache@v4
+      with:
+       path: |
+        ~/.gradle/caches
+        ~/.gradle/wrapper
+       key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+       restore-keys: |
+        ${{ runner.os }}-gradle-
+
+    - name: Build with Gradle
+      run: ./gradlew assembleDebug --stacktrace --info --warning-mode all
+
+    - name: Moving filename
+      run: |
+        echo "short_sha=$(echo "${{ github.sha }}" | cut -c1-7)" >> "$GITHUB_ENV"
+        mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/exammod-v${{ env.version }}-${{ env.short_sha }}.apk
+
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+       name: exammod-v${{ env.version }}-${{ env.short_sha }}
+       path: app/build/outputs/apk/debug/*.apk
