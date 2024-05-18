@@ -7,7 +7,9 @@
 
 Sebuah mod dari aplikasi [bimasoft](https://play.google.com/store/apps/developer?id=Bimasoft+Total+Solution) contoh dari modif aplikasinya [ini](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) beserta source codenya agar dapat dicustom sesuka hati.
 
-Aplikasi dapat didownload [disini](https://github.com/0x617375/Exam-Mod/releases) atau langsung download [disini](https://github.com/0x617375/Exam-Mod/releases/download/v1.0/exammod-v1.0.apk).
+Aplikasi dapat didownload [di sini](https://github.com/0x617375/Exam-Mod/releases) atau langsung download [di sini](https://github.com/0x617375/Exam-Mod/releases/download/v1.0/exammod-v1.0.apk).
+
+Laporkan [di sini](https://github.com/0x617375/Exam-Mod/issues/new/choose) jika ada masalah atau ingin bertanya
 
 **Admin tidak bertanggung jawab dengan segala risiko yang pengguna terima**.
 
@@ -35,7 +37,7 @@ Aplikasi dapat didownload [disini](https://github.com/0x617375/Exam-Mod/releases
 Sebagai contoh aplikasi ujian [EXAM CLIENT SMAN 14 BONE v54](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) ini
 
 1. Download terlebih dahulu aplikasi exam diatas
-2. Download dan install Appmanager [disini](https://github.com/MuntashirAkon/AppManager/releases/download/v3.1.5/AppManager_v3.1.5.apk) atau versi sesuai yang kalian inginkan [disini](https://github.com/MuntashirAkon/AppManager/releases)
+2. Download dan install Appmanager [di sini](https://github.com/MuntashirAkon/AppManager/releases/download/v3.1.5/AppManager_v3.1.5.apk) atau versi sesuai yang kalian inginkan [di sini](https://github.com/MuntashirAkon/AppManager/releases)
 3. Buka dan izinkan saja izin aplikasi yang diminta agar tidak error dan ini aman
 4. Saat opsi keystore tutup saja
 5. Centang jangan tampilkan lagi dan saya setuju
