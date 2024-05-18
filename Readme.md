@@ -6,7 +6,8 @@
 ![visitor badge](https://vbr.nathanchung.dev/badge?page_id=0x617375_Exam-Mod&lcolor=a4133c&color=555555&style=plastic&logo=Github)
 
 Sebuah mod dari aplikasi [bimasoft](https://play.google.com/store/apps/developer?id=Bimasoft+Total+Solution) contoh dari modif aplikasinya [ini](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) beserta source codenya agar dapat dicustom sesuka hati.
-**Admin tidak bertanggung jawab dengan segala risiko yang pengguna terima**
+Aplikasi dapat didownload [disini](https://github.com/0x617375/Exam-Mod/releases) atau langsung download [disini](https://github.com/0x617375/Exam-Mod/releases/download/v1.0/exammod-v1.0.apk)
+**Admin tidak bertanggung jawab dengan segala risiko yang pengguna terima**.
 
 
 ## Screenshots
