@@ -6,15 +6,16 @@
 ![visitor badge](https://vbr.nathanchung.dev/badge?page_id=0x617375_Exam-Mod&lcolor=a4133c&color=555555&style=plastic&logo=Github)
 
 Sebuah mod dari aplikasi [bimasoft](https://play.google.com/store/apps/developer?id=Bimasoft+Total+Solution) contoh dari modif aplikasinya [ini](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) beserta source codenya agar dapat dicustom sesuka hati.
-Aplikasi dapat didownload [disini](https://github.com/0x617375/Exam-Mod/releases) atau langsung download [disini](https://github.com/0x617375/Exam-Mod/releases/download/v1.0/exammod-v1.0.apk)
+
+Aplikasi dapat didownload [disini](https://github.com/0x617375/Exam-Mod/releases) atau langsung download [disini](https://github.com/0x617375/Exam-Mod/releases/download/v1.0/exammod-v1.0.apk).
+
 **Admin tidak bertanggung jawab dengan segala risiko yang pengguna terima**.
 
 
 ## Screenshots
-| Screenshot di Homepage | Screenshot di Webview | Screenshot di Settings |
-| --- | --- | --- |
+|            Screenshot di Homepage             |            Screenshot di Webview            |            Screenshot di Settings             |
+| --------------------------------------------- | ------------------------------------------- | --------------------------------------------- |
 | ![Screenshot di Homepage](img/1.Homepage.jpg) | ![Screenshot di Webview](img/2.Webview.jpg) | ![Screenshot di Settings](img/3.Settings.jpg) |
-
 
 ## Fitur yang tersedia
 - [x] Keluar aplikasi tanpa terlogout
@@ -27,6 +28,7 @@ Aplikasi dapat didownload [disini](https://github.com/0x617375/Exam-Mod/releases
 - [x] Layar otomatis selalu menyala
 - [x] Dark mode (bug ada sedikit tambahan teks aneh saat mengerjakan)
 - [x] Zoom in/out website (jika tulisan kekecilan)
+
 
 ## Cara mendapat url exam web
 Sebagai contoh aplikasi ujian [EXAM CLIENT SMAN 14 BONE v54](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) ini
@@ -48,14 +50,17 @@ Ikasi exam, dan klik exam
 14. Disini kita menemukan url yaitu https://uptsman14bone.sch.id
 15. Copy dan paste saja ke aplikasi dan selamat anda telah curang yaitu hacking
 
+
 ## Tanya jawab
 - Kenapa nama apknya withX? X itu sebenarnya AndroidX Jetpack yang awalnya tidak saya gunakan pada awal proyek
 - Kenapa gagal install meski sudah klik selengkapnya dan tanpa memindai tidak bisa? Sebenarnya ini hanya karena google play tidak mengenali developer. Buka aplikasinya sekali lagi dan install nanti bisa
+
 
 ## Credit 
 - [Totond](https://github.com/totond) for [TextPathView](https://github.com/totond/TextPathView)
 - [Hanks-zyh](https://github.com/hanks-zyh) for [HTextView](https://github.com/hanks-zyh/HTextView)
 - [GrenderG](https://github.com/GrenderG) for [Toasty](https://github.com/GrenderG/Toasty)
+
 
 ### Keyword
 - Exambro
@@ -69,6 +74,7 @@ Ikasi exam, dan klik exam
 - Exam Browser Android
 - Browser Exam Android
 - Browser Exam Client Android
+
 
 #### Kode asal
 ```java
