@@ -17,6 +17,7 @@ Aplikasi dapat didownload [disini](https://github.com/0x617375/Exam-Mod/releases
 | --------------------------------------------- | ------------------------------------------- | --------------------------------------------- |
 | ![Screenshot di Homepage](img/1.Homepage.jpg) | ![Screenshot di Webview](img/2.Webview.jpg) | ![Screenshot di Settings](img/3.Settings.jpg) |
 
+
 ## Fitur yang tersedia
 - [x] Keluar aplikasi tanpa terlogout
 - [x] Bisa swipe notif kebawah tanpa logout
