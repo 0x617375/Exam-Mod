@@ -1,21 +1,15 @@
 # Exam Mod Bimasoft
+[![Build and Upload APK](https://github.com/0x617375/Exam-Mod/actions/workflows/build.yml/badge.svg)](https://github.com/0x617375/Exam-Mod/actions/workflows/build.yml)
+![GitHub repo size](https://img.shields.io/github/repo-size/0x617375/Exam-Mod)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/0x617375/Exam-Mod)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/0x617375/Exam-Mod/total)
+![visitor badge](https://vbr.nathanchung.dev/badge?page_id=0x617375_Exam-Mod&lcolor=a4133c&color=555555&style=plastic&logo=Github)
+
 Sebuah mod dari aplikasi [bimasoft](https://play.google.com/store/apps/developer?id=Bimasoft+Total+Solution) contoh dari modif aplikasinya [ini](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) beserta source codenya agar dapat dicustom sesuka hati.
 **Admin tidak bertanggung jawab dengan segala risiko yang pengguna terima**
 
 
 ## Screenshots
-<!--<div style="overflow-x: scroll;">
-<img
-	src="img/1.Homepage.jpg"
-	alt="Screenshot di homepace" width="100"/>
-<img
-	src="img/2.Webview.jpg"
-	alt="Screenshot di webview" width="100"/>
-<img
-	src="img/3.Settings.jpg"
-	alt="Screenshot di settings" width="100"/>
-</div> -->
-
 | Screenshot di Homepage | Screenshot di Webview | Screenshot di Settings |
 | --- | --- | --- |
 | ![Screenshot di Homepage](img/1.Homepage.jpg) | ![Screenshot di Webview](img/2.Webview.jpg) | ![Screenshot di Settings](img/3.Settings.jpg) |
