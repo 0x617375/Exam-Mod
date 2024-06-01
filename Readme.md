@@ -41,8 +41,7 @@ Sebagai contoh aplikasi ujian [EXAM CLIENT SMAN 14 BONE v54](https://play.google
 3. Buka dan izinkan saja izin aplikasi yang diminta agar tidak error dan ini aman
 4. Saat opsi keystore tutup saja
 5. Centang jangan tampilkan lagi dan saya setuju
-6. Tunggu sampai aplikasi selesai dimuat, cari ap
-Ikasi exam, dan klik exam
+6. Tunggu sampai aplikasi selesai dimuat, cari aplikasi exam, dan klik exam
 7. Klik kanannya direktori sumber pada bagian seperti meluncur dan buka dengan appmanager explore/menjelajahi
 8. Klik base.apk dan buka dengan menjelajahi
 9. Tekan classes.dex dan buka lagi dengan menjelajahi
