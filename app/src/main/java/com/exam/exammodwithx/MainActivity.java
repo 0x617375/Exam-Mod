@@ -60,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "Masukkan url dengan benar", 0).show();
                     return;
                 }
-                if(!urltv.startsWith("https")){ // Memaksa ke https agar bisa diload
-                    urltv = "https://" + urltv;
-                }
+                // if(!urltv.startsWith("https")){ // Memaksa ke https agar bisa diload
+                //    urltv = "https://" + urltv;
+                //}
                 Intent webAct = new Intent(MainActivity.this, WebviewActivity.class);
                 webAct.putExtra("url", urltv);
                 sharedPreferences.edit().putString("url", urltv).apply();
