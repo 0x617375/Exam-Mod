@@ -33,11 +33,28 @@ Laporkan [di sini](https://github.com/0x617375/Exam-Mod/issues/new/choose) jika 
 - [x] Zoom in/out website (jika tulisan kekecilan)
 
 
-## Cara mendapat url exam web
+## 3 Cara mendapat url exam web
+
+### Cara pertama (paling mudah)
+1. Download [personalDNSfilter](https://play.google.com/store/apps/details?id=dnsfilter.android) dan buka. Izinkan sambungan vpn dan klik centang sampai ada log situs apa aja yang terdeteksi
+2. Pastikan apk exam terclose, buka ulang dan masuk ke dalam website.
+3. Cek personalDNSfilter untuk situs baru yang diakses. 
+4. Link exam biasanya ada nama sekolah kalian, singkatannya, serta ada kata cbt di dalamnya. Copas saja link itu dan tempelkan pada bagian url.
+5. Buka apk personalDNSfilter dan tekan close
+6. Tekan masuk pada exam dan sudah berhasil.
+
+### Cara kedua (lumayan gampang daripada yang ketiga
+1. Download [AEE](https://github.com/apk-editor/APK-Explorer-Editor/releases/download/v0.29/app-full-release.apk) dan buka.
+2. Cari nama apk exam kamu dan tekan, pilih simple decompile dan buka classes.dex.
+3. Buka folder id/web/bimasoft/.../MainActivity.smali
+4. Scroll sampai bawah dan cari url yang berawalan https dan salin.
+5. Tempelkan pada aplikasi Exam Mod dan masuk
+
+### Cara ketiga (buat developer pro aja)
 Sebagai contoh aplikasi ujian [EXAM CLIENT SMAN 14 BONE v54](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) ini
 
 1. Download terlebih dahulu aplikasi exam diatas
-2. Download dan install Appmanager [di sini](https://github.com/MuntashirAkon/AppManager/releases/download/v3.1.5/AppManager_v3.1.5.apk) atau versi sesuai yang kalian inginkan [di sini](https://github.com/MuntashirAkon/AppManager/releases)
+2. Download dan install Appmanager [di sini](https://github.com/MuntashirAkon/AppManager/releases/download/v4.0.0-beta02/AppManager_v4.0.0-beta02.apk) atau versi sesuai yang kalian inginkan [di sini](https://github.com/MuntashirAkon/AppManager/releases)
 3. Buka dan izinkan saja izin aplikasi yang diminta agar tidak error dan ini aman
 4. Saat opsi keystore tutup saja
 5. Centang jangan tampilkan lagi dan saya setuju
