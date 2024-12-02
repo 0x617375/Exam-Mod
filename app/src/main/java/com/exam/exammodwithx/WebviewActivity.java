@@ -190,5 +190,15 @@ public class WebviewActivity extends AppCompatActivity {
             // Tidak melakukan apa apa hanya jika tidak ada fungsi
             // ini dalam class maka tidak diijinkan mengakses website
         }
-    }   
+        
+        @JavascriptInterface
+        public final void startPinningApp() {
+        
+        }
+
+        @JavascriptInterface
+        public final void stopPinningApp() {
+        
+        }   
+        
 }
