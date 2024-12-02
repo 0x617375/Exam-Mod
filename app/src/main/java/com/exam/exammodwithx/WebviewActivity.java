@@ -200,5 +200,5 @@ public class WebviewActivity extends AppCompatActivity {
         public final void stopPinningApp() {
         
         }   
-        
+    }
 }
