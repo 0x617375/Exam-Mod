@@ -9,7 +9,9 @@ Sebuah mod dari aplikasi [bimasoft](https://play.google.com/store/apps/developer
 
 Aplikasi dapat didownload [di sini](https://github.com/0x617375/Exam-Mod/releases) atau langsung download [di sini](https://github.com/0x617375/Exam-Mod/releases/download/v1.0/exammod-v1.0.apk).
 
-Laporkan [di sini](https://github.com/0x617375/Exam-Mod/issues/new/choose) jika ada masalah atau ingin bertanya
+Laporkan [di sini](https://github.com/0x617375/Exam-Mod/issues/new/choose) jika ada masalah atau ingin bertanya. Jangan lupa sertakan link aplikasi yang kamu gunakan atau upload file apknya dalam bentuk zip agar bisa diupload.
+
+**Sebenarnya ini hanyalah perantara antara ujian berbasis website yang harus menggunakan aplikasi exam agar diizinkan masuk web ujian. Segala bentuk aplikasi exam lain yang susah dipahami dan membutuhkan usaha lebih untuk dimodifikasi silakan modifikasi sendiri. Toolsnya bisa dengan MT Manager, App Manager, ApkTool, dll buat reverse engineering apk android. Pahami kode java, xml, smali.**
 
 **Admin tidak bertanggung jawab dengan segala risiko yang pengguna terima**.
 
