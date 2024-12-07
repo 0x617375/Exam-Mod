@@ -96,6 +96,10 @@ public class WebviewActivity extends AppCompatActivity {
                 wbst.setForceDark(WebSettings.FORCE_DARK_ON); // Membuat web menjadi dark (opsional tergantung setting)
             //}
         }
+        if(sharedPreferences.getString("user_agent", null) != null && 
+           !sharedPreferences.getString("user_agent", null).isEmpty()){
+            wbst.setUserAgentString(sharedPreferences.getString("user_agent", null));
+        }
         
         myWebView.setWebViewClient(new MyWebViewClient() {
             @Override

@@ -53,6 +53,24 @@
 
         </LinearLayout>
 
+        <EditText
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:hint="Masukkan user agent"
+             android:id="@+id/et_user_agent" />
+
+        <Button
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:gravity="center"
+             android:text="Save User Agent"
+             android:id="@+id/btn_save_user_agent" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:text=" " />
+
         <TextView
              android:layout_height="wrap_content"
              android:layout_width="wrap_content"

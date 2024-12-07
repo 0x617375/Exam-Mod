@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 
+import android.widget.Toast;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,6 +40,16 @@ public class SettingsActivity extends AppCompatActivity {
             binding.switchDarkMode.setChecked(false);
         }
         
+        if(sharedPreferences.getBoolean("support_zoom",true)){
+            binding.switchSupportZoom.setChecked(true);
+        } else {
+            binding.switchSupportZoom.setChecked(false);
+        }
+        
+        if(sharedPreferences.getString("user_agent", null) != null){
+            binding.etUserAgent.setText(sharedPreferences.getString("user_agent", null));
+        }
+        
         binding.switchDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -61,11 +72,10 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
         
-        if(sharedPreferences.getBoolean("support_zoom",true)){
-            binding.switchSupportZoom.setChecked(true);
-        } else {
-            binding.switchSupportZoom.setChecked(false);
-        }
+        binding.btnSaveUserAgent.setOnClickListener((View v) -> {
+            sharedPreferences.edit().putString("user_agent", binding.etUserAgent.getText().toString()).commit();
+            Toast.makeText(this, "User Agent saved", 1).show();
+        });
     }
     
     @Override

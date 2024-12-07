@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.exam.exammodwithx"
-    compileSdk = 32
+    compileSdk = 33
     //buildToolsVersion = "33.0.2"
     
     defaultConfig {
