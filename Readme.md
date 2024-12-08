@@ -13,6 +13,8 @@ Laporkan [di sini](https://github.com/0x617375/Exam-Mod/issues/new/choose) jika 
 
 **Sebenarnya ini hanyalah perantara antara ujian berbasis website yang harus menggunakan aplikasi exam agar diizinkan masuk web ujian. Segala bentuk aplikasi exam lain yang susah dipahami dan membutuhkan usaha lebih untuk dimodifikasi silakan modifikasi sendiri. Toolsnya bisa dengan MT Manager, App Manager, ApkTool, dll buat reverse engineering apk android. Pahami kode java, xml, smali.**
 
+Note: custom user agent pada setting kosongkan saja jika aplikasi masih dapat berjalan normal. Kalau tidak dapat akses kemungkinkan karena user agent harus sama. Buka saja pertanyaan dan berikan url/file apk dalam zip dan nanti aku cari nama user agent atau masalahnya agar aplikasi dapat berjalan normal
+
 **Admin tidak bertanggung jawab dengan segala risiko yang pengguna terima**.
 
 
@@ -41,18 +43,18 @@ Laporkan [di sini](https://github.com/0x617375/Exam-Mod/issues/new/choose) jika 
 1. Download [personalDNSfilter](https://play.google.com/store/apps/details?id=dnsfilter.android) dan buka. Izinkan sambungan vpn dan klik centang sampai ada log situs apa aja yang terdeteksi
 2. Pastikan apk exam terclose, buka ulang dan masuk ke dalam website.
 3. Cek personalDNSfilter untuk situs baru yang diakses. 
-4. Link exam biasanya ada nama sekolah kalian, singkatannya, serta ada kata cbt di dalamnya. Copas saja link itu dan tempelkan pada bagian url.
+4. Link exam biasanya ada nama sekolah kalian, singkatannya, serta ada kata cbt/exam di dalamnya. Copas saja link itu dan tempelkan pada bagian url.
 5. Buka apk personalDNSfilter dan tekan close
 6. Tekan masuk pada exam dan sudah berhasil.
 
-### Cara kedua (lumayan gampang daripada yang ketiga
+### Cara kedua (lumayan gampang daripada yang ketiga, kadang link ter-obfus, rekomen cara 1 saja)
 1. Download [AEE](https://github.com/apk-editor/APK-Explorer-Editor/releases/download/v0.29/app-full-release.apk) dan buka.
 2. Cari nama apk exam kamu dan tekan, pilih simple decompile dan buka classes.dex.
 3. Buka folder id/web/bimasoft/.../MainActivity.smali
 4. Scroll sampai bawah dan cari url yang berawalan https dan salin.
 5. Tempelkan pada aplikasi Exam Mod dan masuk
 
-### Cara ketiga (buat developer pro aja)
+### Cara ketiga (buat developer pro aja, kadang link juga ter-obfus, rekomen cara 1 saja)
 Sebagai contoh aplikasi ujian [EXAM CLIENT SMAN 14 BONE v54](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) ini
 
 1. Download terlebih dahulu aplikasi exam diatas
