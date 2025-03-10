@@ -1,0 +1,50 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Exam-Mod-With-X/app/src/main/java/com/exam/exammodwithx/WebviewActivity.java",
+      "selection": {
+        "end": {
+          "column": 19,
+          "index": 8641,
+          "line": 217
+        },
+        "start": {
+          "column": 19,
+          "index": 8641,
+          "line": 217
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Exam-Mod-With-X/app/build.gradle.kts",
+      "selection": {
+        "end": {
+          "column": 23,
+          "index": 297,
+          "line": 15
+        },
+        "start": {
+          "column": 23,
+          "index": 297,
+          "line": 15
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Exam-Mod-With-X/Readme.md",
+      "selection": {
+        "end": {
+          "column": 175,
+          "index": 1063,
+          "line": 9
+        },
+        "start": {
+          "column": 175,
+          "index": 1063,
+          "line": 9
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Exam-Mod-With-X/app/src/main/java/com/exam/exammodwithx/WebviewActivity.java"
+}

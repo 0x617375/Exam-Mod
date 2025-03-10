@@ -29,6 +29,7 @@ public class WebviewActivity extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private WebSettings wbst;
     private WebView myWebView;
+    private boolean pinned = false;
 
     @Override
     //@SuppressWarnings("deprecation")
@@ -198,15 +199,32 @@ public class WebviewActivity extends AppCompatActivity {
             // Tidak melakukan apa apa hanya jika tidak ada fungsi
             // ini dalam class maka tidak diijinkan mengakses website
         }
-        
+
+        @JavascriptInterface
+        public final boolean isAppPinned() {
+            return pinned;
+        }
+
         @JavascriptInterface
         public final void startPinningApp() {
-        
+            pinned = true;
         }
 
         @JavascriptInterface
         public final void stopPinningApp() {
+            pinned = false;
+        }
         
-        }   
+        // not sure
+        @JavascriptInterface
+        public final boolean isDevice() {
+            return false;
+        }
+    
+        @JavascriptInterface
+        public final boolean isForbidden() {
+            return false;
+        }
+        
     }
 }
