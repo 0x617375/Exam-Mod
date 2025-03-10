@@ -49,6 +49,10 @@ public class WebviewActivity extends AppCompatActivity {
         getWindow().setFlags( // Agar layar tetap menyala 
             WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
             WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        getWindow().setFlags( // Biar Fullscreen cuy
+            WindowManager.LayoutParams.FLAG_FULLSCREEN, 
+            WindowManager.LayoutParams.FLAG_FULLSCREEN);
         
         // Kode dibawah yang menyebabkan tidak bisa ScreenShoot
         /*getWindow().setFlags(
