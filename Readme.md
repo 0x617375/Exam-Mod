@@ -47,14 +47,14 @@ Note: custom user agent pada setting kosongkan saja jika aplikasi masih dapat be
 5. Buka apk personalDNSfilter dan tekan close
 6. Tekan masuk pada exam dan sudah berhasil.
 
-### Cara kedua (lumayan gampang daripada yang ketiga, kadang link ter-obfus, rekomen cara 1 saja)
+### (not work anymore) Cara kedua (lumayan gampang daripada yang ketiga, kadang link ter-obfus, rekomen cara 1 saja)
 1. Download [AEE](https://github.com/apk-editor/APK-Explorer-Editor/releases/download/v0.29/app-full-release.apk) dan buka.
 2. Cari nama apk exam kamu dan tekan, pilih simple decompile dan buka classes.dex.
 3. Buka folder id/web/bimasoft/.../MainActivity.smali
 4. Scroll sampai bawah dan cari url yang berawalan https dan salin.
 5. Tempelkan pada aplikasi Exam Mod dan masuk
 
-### Cara ketiga (buat developer pro aja, kadang link juga ter-obfus, rekomen cara 1 saja)
+### (not work anymore) Cara ketiga (buat developer pro aja, kadang link juga ter-obfus, rekomen cara 1 saja)
 Sebagai contoh aplikasi ujian [EXAM CLIENT SMAN 14 BONE v54](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) ini
 
 1. Download terlebih dahulu aplikasi exam diatas
@@ -73,6 +73,15 @@ Sebagai contoh aplikasi ujian [EXAM CLIENT SMAN 14 BONE v54](https://play.google
 14. Disini kita menemukan url yaitu https://uptsman14bone.sch.id
 15. Copy dan paste saja ke aplikasi dan selamat anda telah curang yaitu hacking
 
+## Cara mendapatkan user agent
+1. Butuh linknya dulu, cara diatas
+2. Downlaod [Kiwi Browser](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser), buka dan langsung load url
+3. Buka titik 3 kanan atas dan aktifkan Developer tools
+4. Pindah tab ke url tadi dengan tekan ikon kotak di kanan atas dan refresh halamannya
+5. Balik ke dev tools dan cari bagian Network
+6. Klik 2x pada url yang mengandum kata cbtindex dan akan muncul json
+7. Klik titik 3 dan cari pada halaman, masukkan kata useragent
+8. Nah pada bagian "useragent":"..." itu adalah useragent yg perlu diberikan di setting
 
 ## Tanya jawab
 - Kenapa nama apknya withX? X itu sebenarnya AndroidX Jetpack yang awalnya tidak saya gunakan pada awal proyek
