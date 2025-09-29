@@ -5,6 +5,9 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/0x617375/Exam-Mod/total)
 ![visitor badge](https://vbr.nathanchung.dev/badge?page_id=0x617375_Exam-Mod&lcolor=a4133c&color=555555&style=plastic&logo=Github)
 
+> lack of maintenance / kalau ada bug fix sendiri tuh bisa tanya ai sekarang gampang, belajar!!!
+
+
 Sebuah mod dari aplikasi [bimasoft](https://play.google.com/store/apps/developer?id=Bimasoft+Total+Solution) contoh dari modif aplikasinya [ini](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) beserta source codenya agar dapat dicustom sesuka hati.
 
 Aplikasi dapat didownload [di sini](https://github.com/0x617375/Exam-Mod/releases) atau langsung download [di sini](https://github.com/0x617375/Exam-Mod/releases/download/v1.3/exammod-v1.3.apk).
