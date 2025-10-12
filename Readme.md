@@ -5,14 +5,11 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/0x617375/Exam-Mod/total)
 ![visitor badge](https://vbr.nathanchung.dev/badge?page_id=0x617375_Exam-Mod&lcolor=a4133c&color=555555&style=plastic&logo=Github)
 
-> Ciee aplikasinya udah gabisa, yang rajin rajin ya guys
-
 > Lack of maintenance / kalau ada bug fix sendiri tuh bisa tanya ai sekarang gampang, belajar!!!
-
 
 Sebuah mod dari aplikasi [bimasoft](https://play.google.com/store/apps/developer?id=Bimasoft+Total+Solution) contoh dari modif aplikasinya [ini](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) beserta source codenya agar dapat dicustom sesuka hati.
 
-Aplikasi dapat didownload [di sini](https://github.com/0x617375/Exam-Mod/releases) atau langsung download [di sini](https://github.com/0x617375/Exam-Mod/releases/download/v1.3/exammod-v1.3.apk).
+Aplikasi dapat didownload [di sini](https://github.com/0x617375/Exam-Mod/releases) atau langsung download [di sini](https://github.com/0x617375/Exam-Mod/releases/download/v1.4/exammod-v1.4.apk).
 
 Laporkan [di sini](https://github.com/0x617375/Exam-Mod/issues/new/choose) jika ada masalah atau ingin bertanya. Jangan lupa sertakan link aplikasi yang kamu gunakan atau upload file apknya dalam bentuk zip agar bisa diupload.
 
@@ -63,7 +60,7 @@ Note: custom user agent pada setting kosongkan saja jika aplikasi masih dapat be
 Sebagai contoh aplikasi ujian [EXAM CLIENT SMAN 14 BONE v54](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) ini
 
 1. Download terlebih dahulu aplikasi exam diatas
-2. Download dan install Appmanager [di sini](https://github.com/MuntashirAkon/AppManager/releases/download/v4.0.0-beta02/AppManager_v4.0.0-beta02.apk) atau versi sesuai yang kalian inginkan [di sini](https://github.com/MuntashirAkon/AppManager/releases)
+2. Download dan install Appmanager [di sini](https://github.com/MuntashirAkon/AppManager/releases/download/v4.0.5/AppManager_v4.0.5.apk) atau versi sesuai yang kalian inginkan [di sini](https://github.com/MuntashirAkon/AppManager/releases)
 3. Buka dan izinkan saja izin aplikasi yang diminta agar tidak error dan ini aman
 4. Saat opsi keystore tutup saja
 5. Centang jangan tampilkan lagi dan saya setuju
