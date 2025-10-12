@@ -13,8 +13,8 @@ android {
         applicationId = "com.exam.exammodwithx"
         minSdk = 21
         targetSdk = 32
-        versionCode = 4
-        versionName = "1.3"
+        versionCode = 5
+        versionName = "1.4"
         
         vectorDrawables { 
             useSupportLibrary = true
