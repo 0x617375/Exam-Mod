@@ -54,7 +54,7 @@ jobs:
 
     - name: Moving filename
       run: |
-        echo "short_sha=$(echo "${{ github.sha }}" | cut -c1-7)" >> "$GITHUB_ENV"
+        echo "short_sha=${{ github.sha }}" | cut -c1-7 >> "$GITHUB_ENV"
         mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/exammod-v${{ env.version }}-${{ env.short_sha }}.apk
 
     - name: Upload APK
