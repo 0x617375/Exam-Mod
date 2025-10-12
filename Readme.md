@@ -1,4 +1,4 @@
-# Exam Mod Bimasoft
+# Exam Mod Bimasoft (HANYA YANG DARI BIMASOFT!!!). Have Fun :)
 [![Build and Upload APK](https://github.com/0x617375/Exam-Mod/actions/workflows/build.yml/badge.svg)](https://github.com/0x617375/Exam-Mod/actions/workflows/build.yml)
 ![GitHub repo size](https://img.shields.io/github/repo-size/0x617375/Exam-Mod)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/0x617375/Exam-Mod)
