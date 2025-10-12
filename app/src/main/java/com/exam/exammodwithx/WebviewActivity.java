@@ -198,28 +198,139 @@ public class WebviewActivity extends AppCompatActivity {
       "(function(){\n" +
       "  if(window.__android_blur_override_installed) return;\n" +
       "  window.__android_blur_override_installed = true;\n" +
-      "  var storedHandler = null;\n" +
+      "\n" +
       "  function noop(){}\n" +
+      "  function safeLog(){ try{ console && console.log.apply(console, arguments); }catch(e){} }\n" +
+      "\n" +
+      "  // notify to Android bridge\n" +
+      "  function notifyAndroid(){\n" +
+      "    try{\n" +
+      "      if(window.AndroidBridge && typeof window.AndroidBridge.onBlurDetected === 'function'){\n" +
+      "        window.AndroidBridge.onBlurDetected();\n" +
+      "      }\n" +
+      "    }catch(e){ safeLog('notifyAndroid failed', e); }\n" +
+      "  }\n" +
+      "\n" +
+      "  // ---------- Protect window.onblur ----------\n" +
+      "  var storedOnBlur = null;\n" +
       "  try{\n" +
       "    Object.defineProperty(window, 'onblur', {\n" +
       "      configurable: false,\n" +
       "      enumerable: true,\n" +
-      "      get: function(){ return storedHandler; },\n" +
-      "      set: function(fn){\n" +
-      "        // simpan referensi jika suatu saat mau panggil\n" +
-      "        storedHandler = fn;\n" +
-      "        try{ console && console.log('onblur assignment intercepted'); }catch(e){}\n" +
-      "      }\n" +
+      "      get: function(){ return storedOnBlur; },\n" +
+      "      set: function(fn){ storedOnBlur = fn; safeLog('onblur assignment intercepted'); }\n" +
       "    });\n" +
       "  }catch(e){\n" +
-      "    // fallback jika defineProperty gagal (CSP / environment)\n" +
-      "    try{ console && console.warn('defineProperty failed, fallback', e); }catch(x){}\n" +
+      "    safeLog('defineProperty(window.onblur) failed, fallback', e);\n" +
       "    window.onblur = noop;\n" +
-      "    setInterval(function(){ if(window.onblur !== noop){ window.onblur = noop; } }, 500);\n" +
+      "    setInterval(function(){ if(window.onblur !== noop) window.onblur = noop; }, 500);\n" +
       "  }\n" +
-      "  // event listeners tambahan untuk robust detection\n" +
-      "  window.addEventListener('blur', function(){ noop(); }, true);\n" +
-      "  document.addEventListener('visibilitychange', function(){ if(document.hidden) noop(); }, false);\n" +
+      "  // ensure blur events still notify Android\n" +
+      "  window.addEventListener('blur', function(){ notifyAndroid(); }, true);\n" +
+      "\n" +
+      "  // ---------- Protect document.onvisibilitychange and addEventListener for 'visibilitychange' ----------\n" +
+      "  (function(){\n" +
+      "    var originalAdd = Document.prototype.addEventListener;\n" +
+      "    var originalRemove = Document.prototype.removeEventListener;\n" +
+      "    var storedHandlers = [];\n" +
+      "\n" +
+      "    // override addEventListener to intercept 'visibilitychange'\n" +
+      "    Document.prototype.addEventListener = function(type, listener, options){\n" +
+      "      try{\n" +
+      "        if(String(type).toLowerCase() === 'visibilitychange'){\n" +
+      "          // store reference but do NOT attach it so it won't run\n" +
+      "          storedHandlers.push({target: this, listener: listener, options: options});\n      " +
+      "          safeLog('Intercepted addEventListener(visibilitychange)');\n" +
+      "          return; // swallow the registration\n" +
+      "        }\n" +
+      "      }catch(e){ safeLog('addEventListener hook error', e); }\n" +
+      "      // otherwise call original\n" +
+      "      return originalAdd.call(this, type, listener, options);\n" +
+      "    };\n" +
+      "\n" +
+      "    // override removeEventListener to keep behavior consistent for other events\n" +
+      "    Document.prototype.removeEventListener = function(type, listener, options){\n" +
+      "      try{\n" +
+      "        if(String(type).toLowerCase() === 'visibilitychange'){\n" +
+      "          // try remove from storedHandlers if present\n" +
+      "          for(var i = storedHandlers.length - 1; i >= 0; i--){\n" +
+      "            var h = storedHandlers[i];\n" +
+      "            if(h.target === this && h.listener === listener){ storedHandlers.splice(i,1); safeLog('Removed stored visibilitychange handler'); }\n" +
+      "          }\n" +
+      "          return;\n" +
+      "        }\n" +
+      "      }catch(e){ safeLog('removeEventListener hook error', e); }\n" +
+      "      return originalRemove.call(this, type, listener, options);\n" +
+      "    };\n" +
+      "\n" +
+      "    // intercept document.onvisibilitychange assignment\n" +
+      "    var storedOnVis = null;\n" +
+      "    try{\n" +
+      "      Object.defineProperty(document, 'onvisibilitychange', {\n" +
+      "        configurable: false,\n" +
+      "        enumerable: true,\n" +
+      "        get: function(){ return storedOnVis; },\n" +
+      "        set: function(fn){ storedOnVis = fn; safeLog('document.onvisibilitychange assignment intercepted'); }\n" +
+      "      });\n" +
+      "    }catch(e){\n" +
+      "      safeLog('defineProperty(document.onvisibilitychange) failed, fallback');\n" +
+      "      document.onvisibilitychange = null; // try to neutralize\n      " +
+      "      setInterval(function(){ if(document.onvisibilitychange !== null) document.onvisibilitychange = null; }, 500);\n" +
+      "    }\n" +
+      "\n" +
+      "    // Also intercept addEventListener on window (some libs attach there)\n" +
+      "    var origWinAdd = window.addEventListener;\n" +
+      "    var origWinRemove = window.removeEventListener;\n" +
+      "    window.addEventListener = function(type, listener, options){\n" +
+      "      try{\n" +
+      "        if(String(type).toLowerCase() === 'visibilitychange'){\n" +
+      "          safeLog('Intercepted window.addEventListener(visibilitychange)');\n" +
+      "          return; // swallow\n" +
+      "        }\n" +
+      "      }catch(e){ safeLog('window.addEventListener hook error', e); }\n" +
+      "      return origWinAdd.call(this, type, listener, options);\n" +
+      "    };\n" +
+      "    window.removeEventListener = function(type, listener, options){\n" +
+      "      try{\n" +
+      "        if(String(type).toLowerCase() === 'visibilitychange'){\n" +
+      "          // nothing to remove because we swallowed registrations\n" +
+      "          return;\n" +
+      "        }\n" +
+      "      }catch(e){ safeLog('window.removeEventListener hook error', e); }\n" +
+      "      return origWinRemove.call(this, type, listener, options);\n" +
+      "    };\n" +
+      "\n" +
+      "    // If something tries to dispatch visibilitychange manually, intercept at dispatchEvent\n" +
+      "    var origDispatch = EventTarget.prototype.dispatchEvent;\n" +
+      "    EventTarget.prototype.dispatchEvent = function(evt){\n" +
+      "      try{\n" +
+      "        var t = (evt && evt.type) ? String(evt.type).toLowerCase() : '';\n" +
+      "        if(t === 'visibilitychange'){\n" +
+      "          safeLog('Blocked dispatch of visibilitychange');\n" +
+      "          // still notify android if document became hidden\n" +
+      "          if(document.hidden) notifyAndroid();\n" +
+      "          return true; // pretend dispatched\n" +
+      "        }\n" +
+      "      }catch(e){ safeLog('dispatchEvent hook error', e); }\n" +
+      "      return origDispatch.call(this, evt);\n" +
+      "    };\n" +
+      "\n" +
+      "    // Finally, ensure we call notifyAndroid when page actually becomes hidden (robust notify)\n" +
+      "    document.addEventListener('visibilitychange', function(){\n" +
+      "      try{ if(document.hidden) notifyAndroid(); }catch(e){}\n" +
+      "    }, true);\n" +
+      "\n" +
+      "  })();\n" +
+      "\n" +
+      "  // small heartbeat to re-assert protections in case libs try to re-overwrite our hooks\n" +
+      "  setInterval(function(){\n" +
+      "    try{\n" +
+      "      // rebind noop to onblur if someone overwrote\n" +
+      "      if(window.onblur !== null && window.onblur !== undefined && window.onblur !== storedOnBlur){ window.onblur = storedOnBlur; }\n" +
+      "    }catch(e){}\n" +
+      "  }, 1000);\n" +
+      "\n" +
+      "  safeLog('Android blur/visibility protections installed');\n" +
       "})();";
     
         // eksekusi di WebView (panggil dari UI thread)
