@@ -112,6 +112,8 @@ public class WebviewActivity extends AppCompatActivity {
                 super.onPageFinished(webView, url);
                 binding.loadingTextView.setVisibility(View.GONE); // Menghilangkan Loading saat web sudah dimuat
                 myWebView.setVisibility(View.VISIBLE);
+
+                injectOverrideScript();
             }
             
             @Override
@@ -188,6 +190,40 @@ public class WebviewActivity extends AppCompatActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    // contoh metode di Activity / Fragment
+    private void injectOverrideScript() {
+    String script =
+      "(function(){\n" +
+      "  if(window.__android_blur_override_installed) return;\n" +
+      "  window.__android_blur_override_installed = true;\n" +
+      "  var storedHandler = null;\n" +
+      "  function noop(){}\n" +
+      "  try{\n" +
+      "    Object.defineProperty(window, 'onblur', {\n" +
+      "      configurable: false,\n" +
+      "      enumerable: true,\n" +
+      "      get: function(){ return storedHandler; },\n" +
+      "      set: function(fn){\n" +
+      "        // simpan referensi jika suatu saat mau panggil\n" +
+      "        storedHandler = fn;\n" +
+      "        try{ console && console.log('onblur assignment intercepted'); }catch(e){}\n" +
+      "      }\n" +
+      "    });\n" +
+      "  }catch(e){\n" +
+      "    // fallback jika defineProperty gagal (CSP / environment)\n" +
+      "    try{ console && console.warn('defineProperty failed, fallback', e); }catch(x){}\n" +
+      "    window.onblur = noop;\n" +
+      "    setInterval(function(){ if(window.onblur !== noop){ window.onblur = noop; } }, 500);\n" +
+      "  }\n" +
+      "  // event listeners tambahan untuk robust detection\n" +
+      "  window.addEventListener('blur', function(){ noop(); }, true);\n" +
+      "  document.addEventListener('visibilitychange', function(){ if(document.hidden) noop(); }, false);\n" +
+      "})();";
+    
+        // eksekusi di WebView (panggil dari UI thread)
+        myWebView.post(() -> myWebView.evaluateJavascript(script, null));
     }
     
 
