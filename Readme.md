@@ -5,7 +5,7 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/0x617375/Exam-Mod/total)
 ![visitor badge](https://vbr.nathanchung.dev/badge?page_id=0x617375_Exam-Mod&lcolor=a4133c&color=555555&style=plastic&logo=Github)
 
-> Lack of maintenance / kalau ada bug fix sendiri tuh bisa tanya ai sekarang gampang, belajar!!! Atau kalau mau di fix-kan berbayar ya, hargai jasa dan waktuku
+> Hanya untuk edukasi cara bypass fitur fitur yang ada di exam aslinya dengan coding ulang dan patch. no update, dosa curang penyalahgunaan ditanggung sendiri hehehe :)
 
 Sebuah mod dari aplikasi [bimasoft](https://play.google.com/store/apps/developer?id=Bimasoft+Total+Solution) contoh dari modif aplikasinya [ini](https://play.google.com/store/apps/details?id=id.web.bimasoft.sman14bonev54) beserta source codenya agar dapat dicustom sesuka hati.
 
